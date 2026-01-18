@@ -1,29 +1,34 @@
-let display = document.getElementById("display");
+// pobierz wyświetlacz
+var display = document.getElementById("display");
 
-// zawsze czyść po odświeżeniu
-window.onload = () => {
+// wyczyść po każdym odświeżeniu strony
+window.onload = function () {
     display.value = "";
 };
 
+// dodawanie znaków
 function append(value) {
     display.value += value;
 }
 
+// czyszczenie
 function clearDisplay() {
     display.value = "";
 }
 
+// obliczanie
 function calculate() {
     try {
-        let result = eval(display.value);
+        var result = eval(display.value);
         display.value = result;
 
+        // jeśli wynik to 67 → odśwież po 5 sekundach
         if (result === 67) {
-            setTimeout(() => {
-                location.reload(); // odśwież stronę po 5 sekundach
+            setTimeout(function () {
+                location.reload();
             }, 5000);
         }
-    } catch {
+    } catch (error) {
         display.value = "Błąd";
     }
 }

@@ -15,7 +15,7 @@ body {
     padding: 20px;
 }
 
-/* KALKULATOR */
+/* CALCULATOR */
 .calculator {
     background: #333;
     padding: 20px;
@@ -58,9 +58,10 @@ button {
 }
 
 .video-container video {
-    max-width: 400px;   /* limit width */
-    max-height: 300px;  /* limit height */
-    border: 4px solid #fff; /* border around video */
+    width: auto;       /* automatic width based on aspect ratio */
+    height: 80vh;      /* make video visible but not taller than screen */
+    max-height: 640px; /* optional, prevent too large on big screens */
+    border: 3px solid #fff; 
     border-radius: 10px;
     object-fit: contain; /* maintain aspect ratio */
     box-shadow: 0 0 10px #000;

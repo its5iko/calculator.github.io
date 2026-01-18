@@ -3,25 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Kalkulator</title>
-
-    <!-- zapobiega cache / zapamiętywaniu -->
+    <link rel="stylesheet" href="style.css">
+    <!-- zapobiega cache i autofill -->
     <meta http-equiv="Cache-Control" content="no-store" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
 
         <!-- KALKULATOR -->
         <div class="calculator">
-            <input
-                type="text"
-                id="display"
-                disabled
-                autocomplete="off"
-            >
+            <input type="text" id="display" disabled autocomplete="off">
 
             <div class="buttons">
                 <button onclick="clearDisplay()">C</button>
@@ -56,6 +49,7 @@
 
     </div>
 
+    <!-- JS -->
     <script src="script.js"></script>
 </body>
 </html>

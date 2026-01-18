@@ -10,7 +10,16 @@ function clearDisplay() {
 
 function calculate() {
     try {
-        display.value = eval(display.value);
+        let result = eval(display.value);
+        display.value = result;
+
+        if (result === 67) {
+            setTimeout(() => {
+                // "Wyłączenie" strony
+                document.body.innerHTML = "";
+                document.body.style.background = "black";
+            }, 3000);
+        }
     } catch {
         display.value = "Błąd";
     }

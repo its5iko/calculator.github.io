@@ -1,17 +1,18 @@
-// pobierz wyświetlacz
-var display = document.getElementById("display");
+// GLOBALNY display
+var display;
 
-// wyczyść po każdym odświeżeniu strony
+// inicjalizacja po załadowaniu strony
 window.onload = function () {
+    display = document.getElementById("display");
     display.value = "";
 };
 
-// dodawanie znaków
+// dodanie znaku / liczby
 function append(value) {
     display.value += value;
 }
 
-// czyszczenie
+// czyszczenie wyświetlacza
 function clearDisplay() {
     display.value = "";
 }
@@ -22,13 +23,13 @@ function calculate() {
         var result = eval(display.value);
         display.value = result;
 
-        // jeśli wynik to 67 → odśwież po 5 sekundach
+        // jeśli wynik = 67 → odśwież po 5 sekundach
         if (result === 67) {
             setTimeout(function () {
                 location.reload();
             }, 5000);
         }
-    } catch (error) {
+    } catch (e) {
         display.value = "Błąd";
     }
 }

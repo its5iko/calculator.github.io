@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Kalkulator</title>
+
+    <!-- zapobiega cache / zapamiętywaniu -->
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
 
+        <!-- KALKULATOR -->
         <div class="calculator">
-            <input type="text" id="display" disabled>
+            <input
+                type="text"
+                id="display"
+                disabled
+                autocomplete="off"
+            >
 
             <div class="buttons">
                 <button onclick="clearDisplay()">C</button>
@@ -34,9 +46,11 @@
             </div>
         </div>
 
+        <!-- VIDEO -->
         <div class="video-container">
-            <video autoplay loop muted>
+            <video autoplay loop muted playsinline>
                 <source src="subway.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje video.
             </video>
         </div>
 

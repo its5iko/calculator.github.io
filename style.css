@@ -11,6 +11,8 @@ body {
 .container {
     display: flex;
     height: 100vh;
+    gap: 20px; /* space between calculator and video */
+    padding: 20px;
 }
 
 /* KALKULATOR */
@@ -18,6 +20,8 @@ body {
     background: #333;
     padding: 20px;
     width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
 }
 
 #display {
@@ -48,11 +52,16 @@ button {
 /* VIDEO */
 .video-container {
     flex: 1;
-    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 400px;   /* limit width */
+    max-height: 300px;  /* limit height */
+    border: 4px solid #fff; /* border around video */
+    border-radius: 10px;
+    object-fit: contain; /* maintain aspect ratio */
+    box-shadow: 0 0 10px #000;
 }
